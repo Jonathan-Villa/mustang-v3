@@ -87,7 +87,7 @@ app.post("/delete", (req, res) => {
   contactModel
     .deleteOne({ _id: req.body.id })
     .then((doc) => {
-      res.status(200).json({ message: `Successful deletion` });
+      res.status(200).json({ message: `Successful deletion!` });
     })
     .catch((err) => console.log(err));
 });
