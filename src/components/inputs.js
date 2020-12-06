@@ -42,7 +42,7 @@ function Inputs(props) {
     };
 
     await axios
-      .post("http://localhost:4000/create", userInputData)
+      .post("http://localhost:4000/api/create", userInputData)
       .then((e) => console.log("Successful register"))
       .catch((err) => console.log(err));
 

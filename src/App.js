@@ -28,7 +28,7 @@ function App() {
   useEffect(() => {
     const fetchContacts = async () => {
       await axios
-        .get("http://localhost:4000/")
+        .get("http://localhost:4000/api")
         .then(({ data }) =>
           setStorage({
             items: data.map((index) => ({
@@ -85,7 +85,7 @@ function App() {
     storage.items.forEach(async (element, key) => {
       if (key === e) {
         return await axios
-          .post("http://localhost:4000/delete", element)
+          .post("http://localhost:4000/api/delete", element)
           .then((res) => console.log(res))
           .catch((err) => console.log(err));
       }
@@ -95,7 +95,7 @@ function App() {
   const handleUpdateSubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:4000/update", {
+      .post("http://localhost:4000/api/update", {
         id: input.id,
         firstName: firstName,
         lastName: lastName,
