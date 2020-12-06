@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const app = express();
+const path = require("path");
 const PORT = 4000;
 
 require("dotenv").config();
@@ -91,6 +92,13 @@ app.post("/delete", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "mustang-v3/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "mustang-v3/build", "index.html"));
+  });
+}
 
 app.listen(PORT, () => {
   console.log("Server is live!");

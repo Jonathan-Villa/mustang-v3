@@ -17,6 +17,7 @@
   },
   "proxy": "http://localhost:4000/",
   "scripts": {
+    "heroku-postbuild": "cd server && npm install --only=dev --no-shrinkwrap && npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
