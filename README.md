@@ -1,6 +1,5 @@
 ## READ OPERATION
-
-
+![me](https://github.com/Jonathan-Villa/mustang-v3/blob/master/images/create_operation.gif)
 
 ## `yarn install || npm install`
 Install's the dependencies required to run the application.  
