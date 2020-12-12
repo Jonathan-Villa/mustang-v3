@@ -32,6 +32,6 @@ export const useStyles = makeStyles(() => ({
   }, 
   iconBtnTrash:{
     margin: "0px 20px 0px 0px",
-    padding:"0px"
+    padding:"20px"
   }
 }));

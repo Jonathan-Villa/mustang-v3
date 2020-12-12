@@ -116,7 +116,7 @@ function App() {
 
   return (
     <M.Container className={styles.root}>
-      <M.Container maxWidth="md" className={styles.subRoot}>
+      <M.Container maxWidth="lg" className={styles.subRoot}>
         <M.Container
           maxWidth="xs"
           className={styles.btnContainer}
@@ -127,7 +127,7 @@ function App() {
             <h2>Create, Read, Update, Delete</h2>
             <div className="btn-container">
               <M.Button
-                variant="contained"
+                variant="outlined"
                 onClick={handleCreateClick}
                 aria-label="Clear"
                 color="primary"
@@ -137,7 +137,7 @@ function App() {
               </M.Button>
               <M.Button
                 className={styles.btnCrud}
-                variant="contained"
+                variant="outlined"
                 onClick={handleReadClick}
                 aria-label="click me"
                 color="primary"
@@ -147,7 +147,7 @@ function App() {
               <M.Button
                 className={styles.btnCrud}
                 onClick={handleUpdateClick}
-                variant="contained"
+                variant="outlined"
                 aria-label="Clear"
                 color="primary"
               >
@@ -157,7 +157,7 @@ function App() {
               <M.Button
                 className={styles.btnCrud}
                 onClick={handleClickDelete}
-                variant="contained"
+                variant="outlined"
                 aria-label="Clear"
                 color="primary"
               >
@@ -274,7 +274,7 @@ function App() {
                           </M.IconButton>
                         ) : null}
                       </div>
-                      <li className="api-container2">
+                      <li  className="api-container2">
                         {`First Name: ${m.firstName}`}
                         <br />
                         {`Last Name: ${m.lastName}`}

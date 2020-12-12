@@ -40,6 +40,7 @@ h1 {
   list-style: none;
 }
 .api-container2 {
+  cursor: pointer;
   list-style: none;
   display: flex;
   flex-direction: column;

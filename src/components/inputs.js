@@ -11,8 +11,9 @@ function Inputs(props) {
   const [zip, bindZip, resetZip] = useInput("");
   const [location, setLocation] = useState({ state: "", city: "" });
 
-  useEffect(() => {
-    const getZip = async () =>
+  useEffect(() => { 
+    
+    const getZip = async () => 
       await axios
         .get(`https://zip.getziptastic.com/v2/US/${zip}`)
         .then(({ data }) =>
@@ -59,7 +60,7 @@ function Inputs(props) {
         className={styles.root}
         type="text"
         required={true}
-        variant="filled"
+        variant="standard"
         name="firstName"
         autoFocus={true}
         label="First Name"
@@ -71,7 +72,7 @@ function Inputs(props) {
         size="small"
         className={styles.root}
         required={true}
-        variant="filled"
+        variant="standard"
         name="lName"
         label="Last Name"
         {...bindLastName}
@@ -100,7 +101,7 @@ function Inputs(props) {
         size="small"
         className={styles.root}
         required={true}
-        variant="filled"
+        variant="standard"
         name="zip"
         label="Zip"
         {...bindZip}
@@ -108,7 +109,7 @@ function Inputs(props) {
 
       <Button
         className={styles.btn}
-        variant="contained"
+        variant="outlined"
         color="primary"
         type="submit"
       >

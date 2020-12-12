@@ -8,7 +8,7 @@ export const inputStyles = makeStyles(()=> ({
     },
     btn: {
         width: "50%",
-        
+        margin:"30px"
     }
 
 }))
