@@ -1,3 +1,8 @@
+## Tools
+Front-end: ReactJS, ES6 syntax
+Back-end: NodeJS, ExpressJS
+Database: MongoDB Atlas
+
 ## Create operation
 ![me](https://github.com/Jonathan-Villa/mustang-v3/blob/master/images/create_operation.gif)
 
