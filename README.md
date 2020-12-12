@@ -1,5 +1,14 @@
-## READ OPERATION
+## Create operation
 ![me](https://github.com/Jonathan-Villa/mustang-v3/blob/master/images/create_operation.gif)
+
+## Read operation
+![me](https://github.com/Jonathan-Villa/mustang-v3/blob/master/images/read_operation.gif)
+
+## Update operation
+![me](https://github.com/Jonathan-Villa/mustang-v3/blob/master/images/update_operation.gif)
+
+## Delete operation
+![me](https://github.com/Jonathan-Villa/mustang-v3/blob/master/images/delete_operation.gif)
 
 ## `yarn install || npm install`
 Install's the dependencies required to run the application.  
