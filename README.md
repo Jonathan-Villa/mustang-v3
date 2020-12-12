@@ -1,6 +1,6 @@
 ## Tools
-Front-end: ReactJS, ES6 syntax
-Back-end: NodeJS, ExpressJS
+Front-end: ReactJS, ES6 syntax //
+Back-end: NodeJS, ExpressJS //
 Database: MongoDB Atlas
 
 ## Create operation
