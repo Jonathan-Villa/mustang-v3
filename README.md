@@ -1,3 +1,10 @@
+## READ OPERATION
+
+
+
+## `yarn install || npm install`
+Install's the dependencies required to run the application.  
+
 ## Available Scripts
 
 In the project directory, you can run:
