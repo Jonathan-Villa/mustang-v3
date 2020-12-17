@@ -6,7 +6,6 @@ const app = express();
 const path = require("path");
 const PORT = 4000;
 
-
 require("dotenv").config();
 
 let corsOptions = {
@@ -43,8 +42,8 @@ const contactModel = new mongoose.model(
   contacts
 );
 
-app.get("/api", async (req, res) => {
-  await contactModel.find({}).then((contacts) => {
+app.get("/api", (req, res) => {
+  contactModel.find({}).then((contacts) => {
     if (contacts) {
       res.status(200).json(contacts);
     }
@@ -53,7 +52,7 @@ app.get("/api", async (req, res) => {
 });
 
 app.post("/api/create", (req, res) => {
-   const newContact = new contactModel({
+  const newContact = new contactModel({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     state: req.body.state,
@@ -63,8 +62,8 @@ app.post("/api/create", (req, res) => {
   newContact.save();
 });
 
-app.post("/api/update", async (req, res) => {
-  await contactModel
+app.post("/api/update", (req, res) => {
+  contactModel
     .findOneAndUpdate(
       { _id: req.body.id },
       {

@@ -11,10 +11,9 @@ function Inputs(props) {
   const [zip, bindZip, resetZip] = useInput("");
   const [location, setLocation] = useState({ state: "", city: "" });
 
-  useEffect(() => { 
-    
-    const getZip = async () => 
-      await axios
+  useEffect(() => {
+    const getZip = () =>
+      axios
         .get(`https://zip.getziptastic.com/v2/US/${zip}`)
         .then(({ data }) =>
           setLocation({
@@ -31,7 +30,7 @@ function Inputs(props) {
     getZip();
   }, [zip]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const userInputData = {
       // object with form data
@@ -42,7 +41,7 @@ function Inputs(props) {
       zip: zip,
     };
 
-    await axios
+    axios
       .post("http://localhost:4000/api/create", userInputData)
       .then((e) => console.log("Successful register"))
       .catch((err) => console.log(err));

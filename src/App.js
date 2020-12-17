@@ -26,8 +26,8 @@ function App() {
   const [storage, setStorage] = useState([]);
 
   useEffect(() => {
-    const fetchContacts = async () => {
-      await axios
+    const fetchContacts = () => {
+      axios
         .get("http://localhost:4000/api")
         .then(({ data }) =>
           setStorage({
@@ -82,9 +82,9 @@ function App() {
   };
 
   const handleTrashClick = (e) => {
-    storage.items.forEach(async (element, key) => {
+    storage.items.forEach((element, key) => {
       if (key === e) {
-        return await axios
+        return axios
           .post("http://localhost:4000/api/delete", element)
           .then((res) => console.log(res))
           .catch((err) => console.log(err));
@@ -92,9 +92,9 @@ function App() {
     });
   };
 
-  const handleUpdateSubmit = async (e) => {
+  const handleUpdateSubmit = (e) => {
     e.preventDefault();
-    await axios
+    axios
       .post("http://localhost:4000/api/update", {
         id: input.id,
         firstName: firstName,
@@ -274,7 +274,7 @@ function App() {
                           </M.IconButton>
                         ) : null}
                       </div>
-                      <li  className="api-container2">
+                      <li className="api-container2">
                         {`First Name: ${m.firstName}`}
                         <br />
                         {`Last Name: ${m.lastName}`}
