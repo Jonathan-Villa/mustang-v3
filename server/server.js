@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
-const PORT = process.env.PORT || 5000;
+
 
 require("dotenv").config();
 
@@ -44,6 +44,10 @@ const contactModel = new mongoose.model(
   process.env.DB_COLLECTION_NAME,
   contacts
 );
+
+app.get("/", (req,res)=> {
+  
+})
 
 app.get("/api", (req, res) => {
   contactModel.find({}).then((contacts) => {
@@ -103,6 +107,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Server is live!");
 });
