@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
-const PORT = 4000;
+const PORT = process.env.PORT || 5000;
 
 require("dotenv").config();
 
@@ -15,6 +15,9 @@ let corsOptions = {
 };
 
 const URI = process.env.DB_URI;
+
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
 
 app.use(cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: false })); // middleware
